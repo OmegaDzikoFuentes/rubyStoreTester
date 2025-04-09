@@ -1,15 +1,15 @@
-<h1>Products#index</h1>
-
-<div id="products">
-  <% @products.each do |product| %>
-    <div>
-        <a href="/products/<%= product.id %>">
-            <%= product.name %>
-        </a>
-    </div>
-  <% end %>
+<div class="flex flex-col gap-4">
+  <h1 class="text-3xl font-bold underline">Products</h1>
+  <%= link_to "New Product", new_product_path, class: "text-gold-500" %>
+  
+  <div id="products">
+    <% @products.each do |product| %>
+      <div>
+          <a href="/products/<%= product.id %>">
+              <%= product.name %>
+          </a>
+      </div>
+    <% end %>
+  </div>
 </div>
-
-
-
 

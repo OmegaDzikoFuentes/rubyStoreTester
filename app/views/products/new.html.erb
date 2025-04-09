@@ -1,0 +1,13 @@
+<h1 class="text-xl font-bold">New Product</h1>
+<div class="flex flex-col gap-4">
+<%= form_with model: @product do |form| %>
+    <div>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+  
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+  </div>
