@@ -23,8 +23,6 @@
   </head>
 
   <body>
-    <div class="notice"><%= notice %></div>
-
     <nav>
     <%= link_to "Login", new_session_path unless authenticated? %>
     <%= link_to "Home", root_path %>
@@ -32,6 +30,7 @@
   </nav>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
+         <div class="notice"><%= notice %></div>
     </main>
   </body>
 </html>
